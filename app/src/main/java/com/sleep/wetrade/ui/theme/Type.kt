@@ -35,7 +35,7 @@ val WeTradeTypography = Typography(
     h1 = TextStyle(
         fontWeight = FontWeight.ExtraBold,
         fontSize = 40.sp,
-        letterSpacing = 1.25.sp
+        letterSpacing = 1.25.sp,
     ),
     h2 = TextStyle(
         fontWeight = FontWeight.ExtraBold,

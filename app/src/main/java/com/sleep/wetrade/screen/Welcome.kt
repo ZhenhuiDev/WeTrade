@@ -20,6 +20,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.google.accompanist.insets.navigationBarsPadding
 import com.sleep.wetrade.R
 import com.sleep.wetrade.ui.theme.Gray900
 import com.sleep.wetrade.ui.theme.Yellow
@@ -33,24 +34,16 @@ fun Welcome(navController: NavController) {
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
         )
-        Text(modifier = Modifier.align(Alignment.Center), text = buildAnnotatedString {
-            withStyle(
-                style = SpanStyle(
-                    color = Color.White,
-                    fontWeight = FontWeight.Thin,
-                    fontSize = 40.sp
-                )
-            ) {
-                append("We")
-            }
-            withStyle(style = SpanStyle(fontWeight = FontWeight.Medium, fontSize = 40.sp)) {
-                append("Trade")
-            }
-        })
+        Image(
+            modifier = Modifier.align(Alignment.Center),
+            painter = painterResource(id = R.drawable.logo),
+            contentDescription = "",
+        )
         Row(
             Modifier
                 .align(Alignment.BottomCenter)
                 .padding(horizontal = 16.dp, vertical = 32.dp)
+                .navigationBarsPadding()
         ) {
             Button(
                 modifier = Modifier
