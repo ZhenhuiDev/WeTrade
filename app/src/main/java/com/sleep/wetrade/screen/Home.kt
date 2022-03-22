@@ -69,10 +69,12 @@ fun Home(navController: NavController) {
             contentDescription = "",
             Modifier
                 .padding(16.dp)
-                .fillMaxWidth(),
-            contentScale = ContentScale.FillBounds
+                .fillMaxWidth()
+                .weight(1f)
+            ,
+            contentScale = ContentScale.FillWidth
         )
-        Spacer(modifier = Modifier.weight(1f))
+        Spacer(modifier = Modifier.size(16.dp))
         Button(
             modifier = Modifier
                 .fillMaxWidth()
